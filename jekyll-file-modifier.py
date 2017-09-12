@@ -5,17 +5,17 @@ import shutil
 from io import BytesIO
 import glob
 
+
+def write_seo_data_to_csv(my_directory):
+    md_files = directory_frontmatter(my_directory, output=False)
+
 def parse_new_changes(my_file):
     """
     Takes a .txt file as input and reads new changes
     """
     with open(my_file) as change_file:
-    
-        # lines = change_file.readlines()
+
         string_data = change_file.read()
-        
-        # # original_path = lines[0]
-        # print(original_path)
 
         separator = "\n" + ("=" * 40) + "\n"
         
@@ -136,7 +136,6 @@ def main():
             directory_frontmatter(input_file)
     else:
         print("Please supply a path to file or directory to collect contents.")
-        
         
         
 if __name__ == "__main__":

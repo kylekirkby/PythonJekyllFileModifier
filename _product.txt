@@ -1,0 +1,1261 @@
+/Users/kyle/Documents/WebDevelopment/96boards-jekyll/_product
+========================================
+---
+description: 'The 96Boards products that have been announced are shown below.
+
+  Click on the links to find out more about the boards and where to order them.
+
+  The tabs provide links to the different types of products that are and will become
+  available.'
+layout: empty-row-page
+permalink: /products/
+redirect_from:
+- /product/
+status: active
+title: Products
+---
+
+# Products
+
+- [Consumer Edition](ce/README.md)
+- [Enterprise Edition](ee/README.md)
+- [IoT Edition](ie/README.md)
+
+***
+
+- [Mezzanine](mezzanine/README.md)
+- [Accessories](accessories/README.md)
+========================================
+---
+{}
+---
+
+# Accessories
+
+Any single board computer relies on a host of accessories to make it useful in different markets. One aim of the 96Boards specification is to create a standard software and hardware platform across multiple SoCs for which a full range of accessories will be available and these will work across the boards. These products will be split into mezzanine products, which plug into the 96Boards high- and low-speed connectors to extend the board functionality, and everything else – from power supplies to UART solutions – which will be listed on this page. We’re working on a system that will enable users, manufacturers and distributors to post compatible products and then for users to review these and verify compatibility. Before that is ready, we are manually updating this page and you can make suggestions by emailing 96Boards@Linaro.org.
+========================================
+---
+description: USB Ethernet adapter Accessories for 96Boards
+layout: accessory-display-page
+permalink: /product/adapter/
+redirect_from:
+- /products/accessories/adapter/
+title: USB Ethernet adapter Accessories
+---
+
+This section is for all USB devices that work on 96Boards. This will hopefully include USB Adapters, USB audio solutions, USB cameras and more… Note that we do not plan to list out USB hubs or USB mice and keyboards, but if there are particularly innovative solutions that we feel are worth listing, they may be listed here or in miscellaneous.
+========================================
+---
+description: Debug Accessories for 96Boards
+layout: accessory-display-page
+permalink: /product/debug/
+redirect_from:
+- /products/accessories/debug/
+title: Debug Accessories
+---
+========================================
+---
+description: Miscellaneous Accessories for 96Boards
+layout: accessory-display-page
+permalink: /product/misc/
+redirect_from:
+- /products/accessories/misc/
+title: Miscellaneous Accessories
+---
+
+As we add compatible devices, this is a page for things that don’t fit elsewhere. If we start to see lots of particular devices, we will add a new category.
+========================================
+---
+description: Power Accessories for 96Boards
+layout: accessory-display-page
+permalink: /product/power/
+redirect_from:
+- /product/universal-power-supply/
+- /products/accessories/power/
+title: Power Accessories
+---
+
+The 96Boards CE boards require an 8-18V 2A power supply.
+
+We recommend a 12V 2A adapter with a DC plug that has a 4.75 mm outer diameter with 1.7mm center pin (EIAJ-3 Compliant).
+
+Easiest way to prepare AC adapter for 96Boards is to have both bellow.
+
+1. AC adapter which has 12V 2A DC output with DC plug has 5,5 diameter and 2.1 mm center pin. (Center pin positive)
+2. DC plug converter from 5,5 diameter with 2.1 mm center pin to 4.75mm diameter with 1.7mm center pin.
+
+Many lower cost boards use the ubiquitous microUSB cable to deliver 5V power. However, this limits the power capability to only 500mA at 5V by original official USB specification, which is less than 3W ([https://en.wikipedia.org/wiki/USB#Power](https://en.wikipedia.org/wiki/USB#Power)). As more powerful SoCs become available, peak power requirements for the SoC alone can easily exceed 5W.
+
+We therefore require an external power supply. In order to minimize the board height profile while maximizing the power available we specified to use an EIAJ-3 compliant DC plug available up to 2A, which is 4.75 mm outer diameter with 1.7mm center pin (4.75/1.7), for the power supply ([https://en.wikipedia.org/wiki/EIAJ_connector](https://en.wikipedia.org/wiki/EIAJ_connector)). For an embedded product, power can alternatively be provided over the low speed expansion bus. (Note: this paragraph has been extracted from the [96Boards Specification](http://96boards.local/specifications/).)
+
+Other types of DC plug commonly used have a 5.5 mm outer diameter with 2.1mm center pin (5.5/2.1).
+
+This page lists out powers supplies with both 4.75/1.7 and 5.5/2.1 connectors plus some 5.5/2.1 to 4.75/1.7 converters that are required if you have a 5.5/2.1 power supply.
+
+The below is more detailed information about selecting the correct DC plug and jack for 96Boards.
+
+There are three commonly used DC plug/jack in most consumer products.
+
+1.  Outer diameter 5.5mm and a 2.1mm center barrel (5.5/2.1)
+2.  Outer diameter 5.5mm and a 2.5mm center barrel (5.5/2.5)
+3.  Outer diameter 4.75mm and a 1.7mm center barrel (4.75/1.7 EIAJ-3 compliant)
+
+And also there are two type of each, (a) center pin positive and (b) center pin negative. The center negative is commonly considered not a good practice but some products uses outer shield for 5V or 12V and the center pin for ground, while most of the AC adapters are opposite, the outer shield is ground and the center pin is 5V or 12V. If you plug the AC adapter with center negative which has outer positive to the 96boards, it will burn out the 96boards products.
+
+There is an EIAJ-2 plug that has an outer diameter of 4.75mm and a 1.7mm center barrel (4.0/1.7). The 4.0/1.7 EIAJ-2 plug is able to insert into 4.75/1.7 EIAJ-3, but it will cause the outer shield to have weak connection and make the board unstable.
+
+Also, the 5.5/2.5 DC plug is able to insert to 5.5/2.1 jack on 5.5/2.1 to 4.75/1.7 converters but it will have weak center pin connection and make the 96Boards unstable.
+
+In the 96boards specification, it uses 4.75/1.7 EIAJ-3 and center pin positive.
+
+We strongly advise to check your plug is correct as follows:
+
+1.  Use DC plug has 4.75/1.7 EIAJ-3.
+2.  Or use plug converter from 5.5/2.1 to 4.75/1.7 EIAJ-3 plug.
+3.  Make sure the polarity is center pin positive.
+========================================
+---
+description: 'The 96Boards Consumer Edition (CE) specification targets the mobile,
+  embedded and digital home segments.
+
+  The boards below are all certified conforming to this specification, which defines
+  a fixed set and location'
+layout: empty-row-page
+permalink: /products/ce/
+specification_image_path: /images/96Boards-Logo_Consumer-small.png
+specification_link: https://linaro.co/ce-specification
+specification_path: /documentation/Specifications/96Boards-CE-Specification.pdf
+title: Consumer Edition (CE)
+---
+
+# Consumer Edition
+
+The 96Boards Consumer Edition (CE) specification targets the mobile, embedded and digital home segments. The boards below are all certified conforming to this
+specification, which defines a fixed set and location for minimum functions including USB, SD and HDMI connectors. Board manufacturers can choose to enhance
+these specifications for particular target markets and functionality can be further enhance by Mezzanine products that connect to the standard low speed and
+high speed peripheral connectors on the boards.
+
+- [Consumer Edition Specification](https://linaro.co/ce-specification)
+
+***
+
+| 96Boards                                | About                                                   | Options                                 |
+|:---------------------------------------:|:-------------------------------------------------------:|:---------------------------------------:|
+| <img src="https://github.com/96boards/documentation/blob/master/ConsumerEdition/HiKey960/AdditionalDocs/Images/Images_Board/Hikey960_front_SD.png?raw=true" data-canonical-src="https://github.com/96boards/documentation/blob/master/ConsumerEdition/HiKey960/AdditionalDocs/Images/Images_Board/Hikey960_front_SD.png?raw=true" width="200" height="130" /><br> **HiKey960** | Board based on HiSilicon Kirin 960 processor  | [View Product](hiKey960/README.md)<br> |
+| <img src="https://github.com/96boards/documentation/blob/master/ConsumerEdition/HiKey/AdditionalDocs/Images/Images_Board/HiKey-Lemaker-Front_SD.jpg?raw=true" data-canonical-src="https://github.com/96boards/documentation/blob/master/ConsumerEdition/HiKey/AdditionalDocs/Images/Images_Board/HiKey-Lemaker-Front_SD.jpg?raw=true" width="200" height="130" /><br> **HiKey** | Board based on HiSilicon Kirin 6220 processor  | [View Product](hiKey/README.md)<br> |
+| <img src="https://github.com/96boards/documentation/blob/master/ConsumerEdition/DragonBoard-410c/AdditionalDocs/Images/Images_Board/DragonBoard410c-Front-SD.jpg?raw=true" data-canonical-src="https://github.com/96boards/documentation/blob/master/ConsumerEdition/DragonBoard-410c/AdditionalDocs/Images/Images_Board/DragonBoard410c-Front-SD.jpg?raw=true" width="200" height="130" /><br> **DragonBoard 410c** | Board based on Qualcomm® Snapdragon™ 410 processor  | [View Product](dragonboard410c/README.md)<br>|
+| <img src="https://github.com/96boards/documentation/blob/master/ConsumerEdition/Bubblegum-96/AdditionalDocs/Images/Images_Board/Bubblegum-96-Front-SD.jpg?raw=true" data-canonical-src="https://github.com/96boards/documentation/blob/master/ConsumerEdition/Bubblegum-96/AdditionalDocs/Images/Images_Board/Bubblegum-96-Front-SD.jpg?raw=true" width="200" height="130" /><br>**Bubblegum-96** | Board based on Actions Semi S900 Processor  | [View Product](bubblegum-96/README.md)<br>|
+<img src="https://github.com/96boards/documentation/blob/master/ConsumerEdition/MediaTekX20/AdditionalDocs/Images/Images_Board/MediaTek%20X20-Front-SD.jpg?raw=true" data-canonical-src="https://github.com/96boards/documentation/blob/master/ConsumerEdition/MediaTekX20/AdditionalDocs/Images/Images_Board/MediaTek%20X20-Front-SD.jpg?raw=true" width="200" height="130" /><br> **MediaTek X20** | Board based on MediaTek X20 Applications Processor  | [View Product](mediatek-x20/README.md)<br>|
+========================================
+---
+description: Bubblegum-96 Board based on Actions Semi S900 Processor
+layout: product-display-page
+permalink: /product/bubblegum-96/
+redirect_from:
+- /products/ce/bubblegum96/
+- /product/bubblegum96/
+- /bubblegum-96/
+title: Bubblegum-96
+---
+
+# Bubblegum-96
+
+The Bubblegum-96 board was first shown in mid 2015 at trade shows in Asia. Since then,  Actions has been working with Linaro to finalize the software support
+and ensure the best possible performance. The board is based on the Actions s900 SoC and delivers high-quality graphics, Wi-Fi, and Bluetooth connectivity, all
+packed into a board the size of a credit card. This board is expected to deliver top of the line performance and superior gaming.
+
+In addition to standard 96Boards features, the board will offer integrated HDMI with Ultra 4K output, Full HD video capture (1080P@60fps H.264) and ARM
+TrustZone® security support.
+## Buy Now
+
+- [uCRobotics](http://linaro.co/bubblegum96-buy)
+
+## Additional Information
+<div style="overflow-x:scroll;" markdown="1">
+
+|   Component          |   Description                                                                                          |
+|:---------------------|:-------------------------------------------------------------------------------------------------------|
+|  SoC                 | Actions - S900                                                                                         |
+|  CPU                 | ARM Cortex-A53 Quad-core up to 1.8GHz                                                                  |
+|  GPU                 | Imagination Power VR G6230, OpenGL ES 3.1, OpenGL 3.2, DirectX 10, OpenCL 1.2 EP                       |
+|  RAM                 | 2GB LPDDR3 @ 533MHz                                                                                    |
+|  PMU                 | ???                                                                                                    |
+|  Storage             | 8GB eMMC 4.51 on board storage MicroSD card slot	                                                     |
+|  Ethernet Port       | USB 2.0 expansion                                                                                      |
+|  Wireless            | Wi-Fi 802.11 b/g/n 2.4GHz Dual-mode bluetooth and bluetooth low energy                                 |
+|  USB                 | 1 x USB2.0, 1 x USB3.0, 1 x USB 2.0 OTG                                                                |
+|  Display             | HDMI 1.4b with HDCP (HDMI connector type A/C), up to 4k Ultra                                          |
+|  Video               | 1080p@60fps HD video playback and capture with H.264 (AVC), 4096*2304@30fps playback with H.265 (HEVC) |
+|  Audio               | PMC / AAC+ / MP3 / WMA                                                                                 |
+|  Camera              |                                                                              |
+|  Expansion Interface | 40 pin low speed expansion connector: UART, SPI, I2S, I2Cx2, GPIOx12, DC Power; 60 pin high speed expansion connector: 4L-MIPI DSI, USB, I2C x2, 2L+4L-MIPI CSI; 1xJTAG header option                                                       |
+|  LED                 | 6 x LED: 4xUser controlled, 2xRadio(BT and WLAN activity)                                               |
+|  Button              | ???                                                                             |
+|  Power Source        | 6.5V~18V@3A, Plug specification is inner diameter 1.7mm and outer diameter 4.8mm  |
+|  OS Support          | Android 5.1 / Debian Linux / Ubuntu Core / Android Remix                                          |
+|  Size                | 85mm x 54mm                                                                     |
+{:.hidden_rows}
+</div>
+
+Please visit the [Bubblegum-96 Hardware User Manual](https://github.com/96boards/documentation/blob/master/ConsumerEdition/Bubblegum-96/HardwareDocs/HardwareManual_Bubblegum96_S900_V1.1.pdf) for more information
+========================================
+---
+description: "DragonBoard 410c by Arrow Electronics, development board based on the
+  mid-tier Qualcomm\xAE Snapdragon\u2122 410 processor. Low-Cost Product Development
+  Platform"
+keywords: processing, power, Wi-Fi, Bluetooth connectivity, GPS, development, board,
+  mid-tier, Qualcomm, Snapdragon 410, processor, low cost, Product, Development, Platform
+layout: product-display-page
+page_title: DragonBoard 410c
+permalink: /product/dragonboard410c/
+redirect_from:
+- /products/ce/dragonboard410c/
+- /products/dragonboard/
+- /product/dragonboard410c-buy.md/
+title: DragonBoard 410c - Low-Cost Product Development Platform
+---
+
+# DragonBoard 410c
+
+The DragonBoard 410c, a product of Arrow Electronics, is the development board based on the mid-tier Qualcomm® Snapdragon™ 410E processor. It features advanced
+processing power, Wi-Fi, Bluetooth connectivity, and GPS, all packed into a board the size of a credit card.
+
+***
+
+## Additional Information
+<div style="overflow-x:scroll;" markdown="1">
+
+
+|   Component          |   Description                                                                                    |
+|:---------------------|:-------------------------------------------------------------------------------------------------|
+|  SoC                 | Qualcomm Snapdragon 410E                                                                         |
+|  CPU                 | ARM Cortex-A53 Quad-core up to 1.2 GHz per core                                                  |
+|  GPU                 | Qualcomm Adreno 306 @ 400MHz for PC-class graphics with support for Advanced APIs, including OpenGL ES 3.0, OpenCL, DirectX, and content security                                                                                     |
+|  RAM                 | 1GB LPDDR3 SDRAM @ 533MHz                                                                        |
+|  Storage             | 8GB eMMC 4.51 on board storage and MicroSD card slot                                             |
+|  Ethernet Port       | USB 2.0 expansion                                                                                |
+|  Wireless            | WLAN 802.11 b/g/n 2.4 GHz, Bluetooth 4.1, GPS. On board GPS, BT and WLAN antennas                |
+|  USB                 | 2 x USB 2.0 Host 1 x USB 2.0 OTG                                                                 |
+|  Display             | 1 x HDMI 1.4 (Type A - full) 1 x MIPI-DSI HDMI output up to FHD 1080P                            |
+|  Video               | 1080p@30fps HD video playback and capture with H.264 (AVC), and 720p playback with H.265 (HEVC)  |
+|  Audio               | PCM/AAC+/MP3/WMA, ECNS, Audio+ post-processing (optional)                                        |
+|  Camera              | Integrated ISP with support for image sensors up to 13MP                                         |
+|  Expansion Interface | 40 pin low speed expansion connector: +1.8V, +5V, SYS_DCIN, GND, UART, I2C, SPI, PCM, PWM,GPIO x12 60 pin high speed expansion connector: 4L-MIPI DSI, USB, I2C x2, 2L+4L-MIPI CSI                                                  |
+|  LED                 | 6 x LED: 4xUser controlled, 2xRadio(BT and WLAN activity)                                        |
+|  Button              | Power/Reset and Volume Up/down                                                                   |
+|  Power Source        | 8V~18V@3A, Plug specification is inner diameter 1.7mm and outer diameter 4.8mm                   |
+|  OS Support          | Android / Linux / Windows IoT Core                                                    |
+|  Size                | 85mm x 54mm                                                                                      |
+{:.hidden_rows}
+
+
+</div>
+========================================
+---
+description: The HiKey board was the first board to be certified 96Boards Consumer
+  Edition compatible,  1GB and 2GB variants are available from LeMaker. The board
+  is based around the HiSilicon Kirin 620  SoC and also delivers high performance
+  3D graphics support, Wi-Fi, and Bluetooth connectivity, all packed into a board
+  the size of a credit card.
+layout: product-display-page
+permalink: /product/hikey/
+redirect_from:
+- /products/hikey/
+- /hikey/
+- /hikey
+- /HiKey/
+- /HiKey
+- /products/ce/hikey-lemaker/
+- /products/ce/hikey/
+title: HiKey (LeMaker)
+---
+
+# HiKey
+
+The HiKey board was the first board to be certified 96Boards Consumer Edition compatible,  1GB and 2GB variants are available from LeMaker. The board is based
+around the HiSilicon Kirin 620  SoC and also delivers high performance 3D graphics support, Wi-Fi, and Bluetooth connectivity, all packed into a board the size
+of a credit card.
+
+[Hikey relaunched by Lemaker](http://www.lemaker.org/page/hikey.html)
+
+## Buy Now
+
+- [LeMaker 1GB](http://linaro.co/hikey-lenovator-buy-1gb)
+- [LeMaker 2GB](http://linaro.co/hikey-lenovator-buy)
+
+***
+
+## Additional Information
+<div style="overflow-x:scroll;" markdown="1">
+
+
+|   Component          |   Description                                                                                    |
+|:---------------------|:-------------------------------------------------------------------------------------------------|
+|  SoC                 | Kirin 620                                                                                        |
+|  CPU                 | ARM® CortexTM-A53 Octa-core 64-bit up to 1.2GHz (ARM v8 instruction set)                         |
+|  GPU                 | ARM Mali 450-MP4, supporting 3D graphics processing, OpenGL ES 1.1/2.0, OpenVG 1.1, 2000Mega@500 MHz, 110M triangle@500 MHz, and 32G flops@500MHz                                                                                    |
+|  RAM                 | 1GB/2GB LPDDR3 SDRAM @ 800MHz                                                                    |
+|  PMU                 | HI6553V100                                                                                       |
+|  Storage             | 8GB eMMC on board storage MicroSD card slot	                                                     |
+|  Ethernet Port       | USB2.0 expansion                                                                                 |
+|  Wireless            | Wi-Fi 802.11 b/g/n 2.4GHz Dual-mode bluetooth and bluetooth low energy                           |
+|  USB                 | 2 x USB2.0 Host 1 x USB 2.0 OTG                                                                  |
+|  Display             | 1 x HDMI 1.4 (Type A - full) 1 x MIPI-DSI HDMI output up to FHD 1080P                            |
+|  Video               | 1080p@30 fps HD video encoding, supporting 1080p@30 fps HD camera 1080p@30 fps HD video decoding Supports H.264, SVC, MPEG1/2/4, H.263, VC-1, WMV9, DivX, RV8/9/10, AVS, VP8                                                        |
+|  Audio               | HDMI output                                                                                      |
+|  Camera              | One 4-lane MIPI camera serial interface(CSI), one 2-lane MIPI CSI                                |
+|  Expansion Interface | 40 pin low speed expansion connector: +1.8V, +5V, SYS_DCIN, GND, UART, I2C, SPI, PCM, PWM,GPIO x12 60 pin high speed expansion connector:   SDIO, MIPI_DSI, MIPI_CSI                                                                |
+|  LED                 | 1 x WiFi activity LED（Yellow） 1 x BT  activity LED (Blue) 4 x User LEDs (Green)                |
+|  Button              | Power Button ： Button Power on/off & Reset the system                                           |
+|  Power Source        | 8V~18V@3A, Plug specification is inner diameter 1.7mm and outer diameter 4.8mm                   |
+|  OS Support          | Android 4.2 / Debian Linux                                                                       |
+|  Size                | 85mm x 54mm                                                                                      |
+{:.hidden_rows}
+
+</div>
+
+Please visit the [HiKey Hardware User Manual](https://github.com/96boards/documentation/blob/master/ConsumerEdition/HiKey/AdditionalDocs/UserManual.md) for more information
+========================================
+---
+description: The HiKey board was the first board to be certified 96Boards Consumer
+  Edition compatible,  this 1GB developer board available from CircuitCo. The board
+  is based around the HiSilicon Kirin 620  SoC and also delivers high performance
+  3D graphics support, Wi-Fi, and Bluetooth connectivity, all packed into a board
+  the size of a credit card.
+layout: product-display-page
+permalink: /product/hikey-circuitco/
+redirect_from:
+- /products/hikey-circuitco/
+title: HiKey (CircuitCo)
+---
+
+# Welcome to the HiKey (CircuitCo)
+
+The HiKey board was the first board to be certified 96Boards Consumer Edition compatible,  this 1GB developer board available from CircuitCo. The board is based around the HiSilicon Kirin 620  SoC and also delivers high performance 3D graphics support, Wi-Fi, and Bluetooth connectivity, all packed into a board the size of a credit card.
+
+** HiKey (CircuitCo): No longer available**
+
+You can try [HiKey by Lemaker ](/product/hikey/)
+========================================
+---
+description: The HiKey board was the first board to be certified 96Boards Consumer
+  Edition compatible,  1GB and 2GB variants are available from LeMaker. The board
+  is based around the HiSilicon Kirin 620  SoC and also delivers high performance
+  3D graphics support, Wi-Fi, and Bluetooth connectivity, all packed into a board
+  the size of a credit card.
+keywords: hikey 960, hikey960, aosp, aosp developement board, boards
+layout: product-display-page
+page_title: HiKey 960
+permalink: /product/hikey960/
+redirect_from:
+- /hikey960/
+- /hikey960
+- /products/hikey960/
+title: HiKey 960 - AOSP Developement Board based [Buy Now] Based on 96Boards CE Specification
+---
+
+# HiKey960
+
+The HiKey 960 development platform is based around the Huawei Kirin 960 octa-core ARM® big.LITTLE™ processor with four ARM Cortex®-A73 and four Cortex-A53
+cores with 3GB of LPDDR4 SDRAM memory, 32GB of UFS 2.0 flash storage, and the latest generation Mali™ G71 MP8 graphics processor. The board is provided by
+Archermind and LeMaker through multiple channels (see links on right).
+
+Initial software support for the board is provided in the AOSP source tree based on the Android Common Kernel using the Linux 4.4 kernel release. Linaro and
+Huawei are also working on the Linux 4.9 based Android Common kernel and maintaining support for the Kirin 960 SoC in the mainline kernel.org tree, allowing
+for the availability of multiple Linux distributions for this board in the future.
+
+## Buy Now
+
+- [Amazon (USA)](http://linaro.co/hikey960buy-amazon)
+- [Lenovator (Worldwide)](http://linaro.co/hikey960buy)
+- [Seeed (Worldwide)](http://linaro.co/hikey960-seed)
+- [Alpha Star](http://linaro.co/hikey960buy-alpha)
+- [Ali express](http://linaro.co/hikey960-ali)
+- [Switch Science (Japan)](http://linaro.co/hikey960-switch)
+- [All Net (Germany)](http://linaro.co/hikey960-allnet)
+
+
+***
+
+## Additional Information
+<div style="overflow-x:scroll;" markdown="1">
+
+
+|   Component          |   Description                                                                                    |
+|:---------------------|:-------------------------------------------------------------------------------------------------|
+|  SoC                 | Kirin 960                                                                                        |
+|  CPU                 | 4 Cortex A73 + 4 Cortex A53 Big.Little CPU architecture                                          |
+|  GPU                 | ARM Mali G71 MP8                                                                                 |
+|  RAM                 | 3GB LPDDR4 SDRAM                                                                                 |
+|  PMU                 | Hi6421GWCV530 PMU                                                                                |
+|  Storage             | 32GB UFS Flash Storage                                                                           |
+|  Wireless            | WiFi (2.4- and 5-GHz dual band with two antennas) and Bluetooh 4.1                               |
+|  USB                 | 2 x USB 3.0 type A (host mode only) and 1 x USB 2.0 type C OTG                                   |
+|  Display             | 1 x HDMI 1.4 (Type A - full), 1 x 4L-MIPI DSI and HDMI output up to FHD 1080P                    |
+|  Video               | Inside Encoder: H.265/H.264 3840 x 2400@30fps 4 x 1080p @ 30 fps, Inside Decoder: H.265, HEVC MP/High Tier, Main 10/High Tier, H.264 BP/MP/HP, MPEG1/2/4, VC-1, VP6/8                                                                 |
+|  Audio               | HDMI output                                                                                      |
+|  Camera              | 1 x 4-lane MIPI CSI and 1 x 2-lane MIPI CSI                                                      |
+|  Expansion Interface | 40 pin low speed expansion connector: +1.8V, +5V, DC power, GND, 2UART, 2I2C, SPI, I2S, 12xGPIO and 60 pin high speed expansion connector: 4L-MIPI DSI, I2C x2, SPI (48M), USB 2.0, 2L+4LMIPI CSI                                    |
+|  LED                 | 1 x WiFi activity LED（Yellow), 1 x BT activity LED (Blue) and 4 x User LEDs (Green)             |
+|  Button              | Power Button ： Button Power on/off & Reset the system                                           |
+|  Power Source        | Recommend a 12V@2A adapter with a DC plug which has a 4.75mm outer diameter and 1.7mm center pin with standard center-positive (EIAJ-3 Compliant)                                                                                        |
+|  OS Support          | AOSP/LINUX                                                                                       |
+|  Size                | 85mm x 55mm                                                                                      |
+{:.hidden_rows}
+
+</div>
+
+Please visit the [HiKey960 Hardware User Manual](https://github.com/96boards/documentation/blob/master/ConsumerEdition/HiKey960/HardwareDocs/HardwareUserManual.md) for more information
+========================================
+---
+description: The Mediatek X20 Development Board is a 96Boards compliant community
+  board based on the MediaTek X20 series of SoCs.
+layout: product-display-page
+permalink: /product/mediatek-x20/
+redirect_from:
+- /products/mediatek-x20/
+- /products/mediatekx20/
+- /product/mediatekx20/
+- /products/ce/mediatek-x20/
+title: Mediatek X20 Development Board
+---
+
+# MediaTek X20
+
+The Mediatek X20 Development Board is a 96Boards compliant community board based on the MediaTek X20 series of SoCs. X20 is a highly integrated application
+processor that includes Dual-core ARM Cortex-A72 processors operating at up to 2.3GHz, Quad-core ARM Cortex-A53 processors operating at up to 1.95GHz, Quad
+core ARM Cortex-A53 processors operating at up to 1.4GHz and a Mali T880 GPU operating at up to 800MHz. In addition, an extensive set of interfaces and
+connectivity peripherals are included to interface to cameras, touch-screen displays and MMC/SD cards. It also fully supports wireless communication, including
+WLAN, Bluetooth and GPS.
+
+## Buy Now
+
+- [AlphStar](http://link.linaro.org/MediatekX20-buy)
+
+***
+
+## Additional Information
+<div style="overflow-x:scroll;" markdown="1">
+
+|   Component          |   Description                                                                                    |
+|:---------------------|:-------------------------------------------------------------------------------------------------|
+|  SoC                 | Helio X20                                                                                        |
+|  CPU                 | 2x ARM Cortex-A72 @ 2.1GHz ~ 2.3GHz<br>4x Cortex-A53 @ 1.95GHz<br>4x Cortex-A53 @ 1.4GHz         |
+|  GPU                 | ARM Mail-T880 GPU operating at up to 800MHz                                                      |
+|  RAM                 | DDR: 2GB LPDDR3                                                                                  |
+|  PMU                 | MT6351                                                                                           |
+|  Storage             | 8GB eMMC5.1 on board storage MicroSD card slot	                                                  |
+|  Ethernet Port       | USB2.0 expansion                                                                                 |
+|  Wireless            | Wi-Fi 802.11 a/b/g/n + Bluetooth 4.1                                                             |
+|  USB                 | 2 x USB2.0 Host 1 x USB 2.0 OTG                                                                  |
+|  Display             | 1 x HDMI 1.4 (Type A - full) 1 x MIPI-DSI HDMI output up to FHD 1080P                            |
+|  Video               | 1080p@30 fps HD video encoding, supporting 1080p@30 fps HD camera 1080p@30 fps HD video decoding Supports H.264, SVC, MPEG1/2/4, H.263, VC-1, WMV9, DivX, RV8/9/10, AVS, VP8                                                        |
+|  Audio               | HDMI output                                                                                      |
+|  Camera              | One 4-lane MIPI camera serial interface(CSI), one 2-lane MIPI CSI                                |
+|  Expansion Interface | 40 pin low speed expansion connector: +1.8V, +5V, SYS_DCIN, GND, UART, I2C, SPI, PCM, PWM,GPIO x12 60 pin high speed expansion connector:   SDIO, MIPI_DSI, MIPI_CSI                                                                |
+|  LED                 | 1 x WiFi activity LED（Yellow） 1 x BT  activity LED (Blue) 4 x User LEDs (Green)                |
+|  Button              | Power Button ： Button Power on/off & Reset the system                                           |
+|  Power Source        | 8V~18V@3A, Plug specification is inner diameter 1.7mm and outer diameter 4.8mm                   |
+|  OS Support          | Android Marshmallow 6.0                                                                          |
+|  Size                | 85mm x 54mm                                                                                      |
+{:.hidden_rows}
+
+</div>
+
+Please visit the [MediaTek X20 Hardware User Manual](https://github.com/96boards/documentation/blob/master/ConsumerEdition/MediaTekX20/HardwareDocs/HardwareUserManual.md) for more information
+========================================
+---
+description: 'The 96Boards Enterprise Edition (EE) specification targets the networking
+  and server segments.
+
+  A first version of this specification is available here. Please subscribe below
+  if you wish to
+
+  be notified when the first board becomes available.'
+layout: empty-row-page
+permalink: /products/ee/
+specification_image_path: /images/96Boards-Logo_Enterprise-small.png
+specification_link: https://linaro.co/ee-specification
+specification_path: /documentation/Specifications/96Boards-EE-Specification.pdf
+title: Enterprise Edition (EE)
+---
+
+# Enterprise Edition
+
+The 96Boards Enterprise Edition (EE) specification targets the networking and server segments. A first version of this specification is available [here](https://linaro.co/ee-specification). Please subscribe below if you wish to be notified when the first board becomes available.
+
+- [Enterprise Edition Specification](https://linaro.co/ee-specification)
+
+***
+
+| 96Boards                                | About                                                   | Options                                 |
+|:---------------------------------------:|:-------------------------------------------------------:|:--------------------:|
+| <img src="https://github.com/96boards/documentation/blob/master/EnterpriseEdition/Poplar/AdditionalDocs/Images/Images_Board/Poplar_Front_SD.png?raw=true" data-canonical-src="https://github.com/96boards/documentation/blob/master/EnterpriseEdition/Poplar/AdditionalDocs/Images/Images_Board/Poplar_Front_SD.png?raw=true" width="200" height="180" /><br> **Poplar** | Board based on Hisilicon Hi3798CV200 processor  | [View Product](poplar/README.md)<br> |
+========================================
+---
+description: Poplar is the first development board compliant with the 96Boards Enterprise
+  Edition TV Platform specification.
+layout: product-display-page
+permalink: /product/poplar/
+title: Poplar
+---
+
+# Poplar
+
+Poplar is the first development board compliant with the 96Boards Enterprise Edition TV Platform specification. Developed by HiSilicon, the board features the Hi3798C V200 with an integrated quad-core 64-bit ARM Cortex A53 processor and high performance Mali T720 GPU, making it capable of running any commercial set-top solution based on Linux or Android. Its high performance specification also supports a premium user experience with up to H.265 HEVC decoding of 4K video at 60 frames per second.
+
+## Buy Now
+
+- [Ali Express](http://linaro.co/poplar-ali)
+
+## News
+
+- [Tocoding Info Page](http://link.linaro.org/poplar-tocoding)
+- [Press Release](http://www.linaro.org/news/linaro-announces-first-development-board-compliant-96boards-tv-platform-specification/)
+
+***
+
+## Additional Information
+<div style="overflow-x:scroll;" markdown="1">
+
+
+|   Component          |   Description                                                                                    |
+|:---------------------|:-------------------------------------------------------------------------------------------------|
+|  SoC                 | Hisilicon Hi3798CV200                                                                            |
+|  CPU                 | Quad-core ARM Cortex-A53 64 bit                                                                  |
+|  DRAM                | DDR3/3L/4 SDRAM interface, maximum 32-bit data width 2 GB on board                               |
+|  USB                 | Two USB 2.0 ports One USB 3.0 ports                                                              |
+|  CONSOLE             | USB-micro port for console support                                                               |
+|  ETHERNET            | 1 GBe Ethernet                                                                                   |
+|  PCIE                | One PCIe 2.0 interfaces                                                                          |
+|  JTAG                | 8-Pin JTAG                                                                                       |
+|  EXPANSION INTERFACE | Linaro 96Boards Low Speed Expansion slot                                                         |
+|  DIMENSION           | Standard 160×120 mm 96Boards Enterprice Edition form factor                                      |
+|  WIFI                | 802.11AC 2*2 with Bluetooth                                                                      |
+|  CONNECTORS          | One connector for Smart Card One connector for TSI                                               |
+{:.hidden_rows}
+
+</div>
+
+***
+========================================
+---
+description: The 96Boards IoT Edition (IE) platform is designed to support development
+  in the Internet of Things (IoT) space.
+layout: empty-row-page
+permalink: /products/ie/
+specification_image_path: /images/96Boards-Logo_IoT.png
+specification_link: https://linaro.co/ie-specification
+specification_path: /documentation/Specifications/96Boards-IE-Specification.pdf
+title: Internet of Things Edition
+---
+
+# IoT Edition
+
+The 96Boards IoT Edition (IE) platform is designed to support development in the Internet of Things (IoT) space.
+
+- [IoT Edition Specification](https://linaro.co/ie-specification)
+
+***
+
+| 96Boards                                | About                                                   | Options                                 |
+|:---------------------------------------:|:-------------------------------------------------------:|:---------------------------------------:|
+| <img src="https://github.com/96boards/documentation/blob/master/IoTEdition/carbon/additional-docs/images/images-board/carbon-front-sd.png?raw=true" data-canonical-src="https://github.com/96boards/documentation/blob/master/IoTEdition/carbon/additional-docs/images/images-board/carbon-front-sd.png?raw=true" width="200" height="110" /><br> **Carbon** | Board based on STMicroelectronics STM32F401RE  | [View Product](carbon/README.md)<br> |
+| <img src="https://github.com/96boards/documentation/blob/master/IoTEdition/nitrogen/additional-docs/images/images-board/nitrogen-front-sd.png?raw=true" data-canonical-src="https://github.com/96boards/documentation/blob/master/IoTEdition/nitrogen/additional-docs/images/images-board/nitrogen-front-sd.png?raw=true" width="200" height="110" /><br> **Nitrogen** | Board based on the nRF52832 microcontroller  | [View Product](nitrogen/README.md)<br> |
+| <img src="https://github.com/96boards/website/blob/master/_product/ie/orangepi-i96/images/orangepi-i96_front-sd.jpg?raw=true" data-canonical-src="https://github.com/96boards/website/blob/master/_product/ie/orangepi-i96/images/orangepi-i96_front-sd.jpg?raw=true" width="200" height="110" /><br> **OrangePi i96** | Board Based on the RDA8810PL ARM Cortex-A5  | [View Product](orangepi-i96/README.md)<br> |
+========================================
+---
+description: Carbon is the first board to be certified 96Boards IoT Edition compatible.
+  The Carbon packs a Cortex-M4 chip, 512KB onboard flash, built in Bluetooth, and
+  a 30-pin low speed expansion header capable of up to 3.3V digital and analog GPIO.
+  Carbon currently runs Zephyr, which is a small, scalable, real-time OS for use on
+  resource-constrained systems.
+layout: product-display-page
+permalink: /product/carbon/
+title: Carbon
+---
+
+# Carbon
+
+Carbon is the first board to be certified 96Boards IoT Edition compatible. The Carbon packs a Cortex-M4 chip, 512KB onboard flash, built in Bluetooth, and a 30-pin low speed expansion header capable of up to 3.3V digital and analog GPIO. Carbon currently runs Zephyr, which is a small, scalable, real-time OS for use on resource-constrained systems.
+
+## Buy Now
+
+- [Seeed Studio](https://www.96boards.org/carbon-buy)
+
+***
+
+## Additional Information
+<div style="overflow-x:scroll;" markdown="1">
+
+
+|   Component          |   Description                                                                                    |
+|:---------------------|:-------------------------------------------------------------------------------------------------|
+|  SoC                 | STMicroelectronics STM32F401RE                                                                   |
+|  CPU                 | Cortex-M4                                                                                        |
+|  Clock speed         | 84MHz maximum                                                                                    |
+|  SRAM                | 96KB                                                                                             |
+|  Storage             | 512KB onboard Flash                                                                              |
+|  Wireless            | nRF51822 Bluetooth                                                                               |
+|  USB                 | 2 x Micro USB                                                                                    |
+|  Expansion Interface | 30 pin low speed expansion connector: +3.3V, +5V, VCC, GND, UART, I2C, SPI, GPIO x4              |
+|  Digital Out Voltage | 3.3V                                                                                             |
+|  Analog In Voltage   | 0-3.3V                                                                                           |
+|  Analog Pins         | 6                                                                                                |
+|  LED                 | 1 x UART Tx, 1 x UART Rx, 1 x Power, 1 x Bluetooth, 2 x User LEDs                                |
+|  Button              | RST (Reset the STM32F4), BOOT0 (Boot into bootloader for flashing)                               |
+|  Power Source        | micro-USB                                                                                        |
+|  OS Support          | Zephyr                                                                                           |
+|  Size                | 60x30mm                                                                                          |
+{:.hidden_rows}
+</div>
+========================================
+---
+description: 'The BLE Nitrogen is joint efforts by 96Boards and Seeed, aims to provide
+  economic and compact  BLE solutions for IoT projects.
+
+
+  Nitrogen is a 96Boards compliant IoT Edition board which aims to provide economic
+  and compact BLE solutions for a variety of IoT projects. This board features the
+  nRF52832 microcontroller by Nordic, 64kb of RAM and 512kb of onboard flash storage.
+  An easily accessible 40 pin low-speed expansion connector and onboard antenna offer
+  a wide variety of IO on the much desired 96Boards IoT form factor.'
+layout: product-display-page
+permalink: /product/nitrogen/
+title: Nitrogen
+---
+
+# Nitrogen
+
+Nitrogen is a 96Boards compliant IoT Edition board which aims to provide economic and compact BLE solutions for a variety of IoT projects. This board features the nRF52832 microcontroller by Nordic, 64kb of RAM and 512kb of onboard flash storage. An easily accessible 40 pin low-speed expansion connector and onboard antenna offer a wide variety of IO on the much desired 96Boards IoT form factor.
+
+## Buy Now
+
+- [Seeed Studio](https://www.seeedstudio.com/BLE-Nitrogen-p-2711.html?gclid=EAIaIQobChMIhKu_ztr81AIVQiWBCh1zjghZEAAYASAAEgIKZPD_BwE)
+
+***
+
+## Additional Information
+<div style="overflow-x:scroll;" markdown="1">
+
+
+|   Component          |   Description                                                                                    |
+|:---------------------|:-------------------------------------------------------------------------------------------------|
+|  SoC                 | nRF52832 microcontroller                                                                         |
+|  CPU                 | Cortex-M4                                                                                        |
+|  Clock Speed         | 64MHz                                                                                            |
+|  RAM                 | 64KB                                                                                             |
+|  Storage             | 512KB onboard Flash                                                                              |
+|  Battery             | Onboard battery connector and charger                                                            |
+|  Debugger            | LPC11U35 on board SWD debugger                                                                   |
+|  Wireless            | nRF51832 Bluetooth with BLE power consumption measurement                                        |
+|  Connectors          | SWD debug, nRF52832 SWD, nRF52832 UART                                                           |
+|  Expansion Interface | 40 Pin Low-speed expansion                                                                       |
+|  Digital Output (V)  | 1.8V                                                                                             |
+|  Analog Input (V)    | 0V - 1.8V                                                                                        |
+|  Antenna             | Onboard chip antenna                                                                             |
+|  Power Source        | USB power supply with fuse protect                                                               |
+|  OS Support          | Zephyr                                                                                           |
+|  Size                | 60x30mm                                                                                          |
+{:.hidden_rows}
+
+</div>
+
+***
+========================================
+---
+description: The Orange Pi is an open-source single-board computer built upon the
+  96Boards IoT Edition specification. It can run Android 4.4, Ubuntu, Debian, Raspbian
+  and more... Based on the RDA8810PL ARM Cortex-A5 32bit SoC, the Orange Pi i96 is
+  for anyone who wants to create using fun open source technology while working with
+  a simple, fun and intuitive platform.
+keywords: Build computer at home, create Wireless servers, build Games consoles, make
+  Music sounds products, create HD video showcases hardware, build Audio Systems from
+  scratch, Android hardware Applications board, Raspberry Pi Scratch game demos
+layout: product-display-page
+permalink: /product/orangepi-i96/
+title: Orange Pi i96
+---
+
+# Orange Pi i96
+
+The Orange Pi is an open-source single-board computer built upon the 96Boards IoT Edition specification. It can run Android 4.4, Ubuntu, Debian, Raspbian and more... Based on the RDA8810PL ARM Cortex-A5 32bit SoC, the Orange Pi i96 is for anyone who wants to create using fun open source technology while working with a simple, fun and intuitive platform.
+
+Think of the things you can build...
+- A computer
+- Wireless servers
+- Games and consoles
+- Music and sounds
+- HD video showcases
+- Audio Systems
+- Android Applications
+- Scratch demos
+- And more...
+
+## Buy Now
+
+- [AliExpress](https://linaro.co/orangepi-i96-buy)
+
+***
+
+## Additional Information
+<div style="overflow-x:scroll;" markdown="1">
+
+|   Component          |   Description                                                                                    |
+|:---------------------|:-------------------------------------------------------------------------------------------------|
+|  SoC                 | RDA8810PL ARM Cortex-A5 32bit                                                                    |
+|  GPU                 | Vivante GC860 3D GPU                                                                             |
+|  RAM                 | Integrated 256MB LPDDR2 SDRAM                                                                    |
+|  Storage             | TF card / Integrated 500MB 8Bit 1.8V 4K SLC Nand Flash                                           |
+|  Wireless            | RDA5991, WIFI+BT                                                                                 |
+|  USB                 | One USB 2.0 HOST, One USB 2.0 OTG                                                                |
+|  Camera              | MIPI CSI-2 Connector for camera sensor up to 2MP                                                 |
+|  Expansion Interface | 40 Pins Header                                                                                   |
+|  LED                 | Power led                                                                                        |
+|  Button              | Power Button(SW602)                                                                              |
+|  Power Source        | USB OTG input can supply power / Battery input can supply power(Optional)                        |
+|  OS Support          | Android, Ubuntu, Debian, etc.                                                                    |
+|  Size                | 60mm × 30mm                                                                                      |
+{:.hidden_rows}
+
+</div>
+
+***
+========================================
+---
+description: '96Boards mezzanine products let you expand your Consumer Edition or
+  Enterprise
+
+  Edition 96Boards with new interfaces for IoT, industrial control, and other
+
+  embedded applications. The following mezzanine expansion boards are currently available.
+
+  Please take some time to review our [mezzanine guidelines](https&#58;//github.com/96boards/documentation/raw/master/mezzanine/files/mezzanine-design-guidelines.pdf)
+  document for some helpful design guidelines and resources.'
+layout: empty-row-page
+specification-logo-path: /images/96Boards-Logo_Partner-small.png
+title: Mezzanine Products
+---
+
+# Mezzanine
+
+96Boards mezzanine products let you expand your [Consumer Edition](https://www.96boards.org/products/ce/) or [Enterprise Edition](https://www.96boards.org/products/ee/) 96Boards with new interfaces for IoT, industrial control, and other
+embedded applications. The following mezzanine expansion boards are currently available.
+
+Please take some time to review our [mezzanine guidelines](https://github.com/96boards/documentation/raw/master/mezzanine/files/mezzanine-design-guidelines.pdf) document for some helpful design guidelines and resources.
+
+***
+
+| Mezzanine                               | About                                                   | Options                                 |
+|:---------------------------------------:|:-------------------------------------------------------:|:---------------------:|
+| <img src="https://github.com/96boards/website/blob/master/_product/mezzanine/stm32/images/STM32_Front.png?raw=true" data-canonical-src="https://github.com/96boards/website/blob/master/_product/mezzanine/stm32/images/STM32_Front.png?raw=true" width="200" height="95" /><br> **STM32**  | Board based around the STM32F446 MCU, enables users to prototype systems that are aware of their environment  | [View Product](stm32/README.md)<br> |
+| <img src="https://github.com/96boards/website/blob/master/_product/mezzanine/linkspritesensorkit/images/LinkSprite_Front.jpg?raw=true" data-canonical-src="https://github.com/96boards/website/blob/master/_product/mezzanine/linkspritesensorkit/images/LinkSprite_Front.jpg?raw=true" width="200" height="95" /><br> **LinkSprite**           | Kit contains Linker mezzanine card and loft modules, great way to get started with 96Boards  | [View Product](linkspritesensorkit/README.md)<br> |
+| <img src="https://github.com/96boards/website/blob/master/_product/mezzanine/uartserial/images/96boards_uarts_Front.png?raw=true" data-canonical-src="https://github.com/96boards/website/blob/master/_product/mezzanine/uartserial/images/96boards_uarts_Front.png?raw=true" width="200" height="70" /><br> **UART Serial Adaptor**  | This adapter is a USB to UART interface to be used with any 96Boards compatible baseboard  | [View Product](uartserial/README.md)<br>|
+| <img src="https://github.com/96boards/website/blob/master/_product/mezzanine/sensors-mezzanine/images/96Boards_Sensors_Front.png?raw=true" data-canonical-src="https://github.com/96boards/website/blob/master/_product/mezzanine/sensors-mezzanine/images/96Boards_Sensors_Front.png?raw=true" width="200" height="95" /><br> **Sensor Mezzanine**     | Kit contains Seeed Sensor Mezzanine card and many sensors, great way to get started with 96Boards  | [View Product](sensors-mezzanine/README.md)<br>|
+| <img src="https://github.com/96boards/website/blob/master/_product/mezzanine/aerocore2/images/AeroCore-2-Mezzanine-front.jpg?raw=true" data-canonical-src="https://github.com/96boards/website/blob/master/_product/mezzanine/aerocore2/images/AeroCore-2-Mezzanine-front.jpg?raw=true" width="200" height="80" /><br> **AeroCore2**            | MAV control board featuring an integrated Cortex-M4 microprocessor and NuttX RTOS  | [View Product](aerocore2/README.md)<br>|
+| <img src="https://github.com/96boards/website/blob/master/_product/mezzanine/mipiadapter/images/MIPI_Front.jpg?raw=true" data-canonical-src="https://github.com/96boards/website/blob/master/_product/mezzanine/mipiadapter/images/MIPI_Front.jpg?raw=true" width="200" height="95" /><br> **MIPI Adapter**         | This board is used to easily integrate image sensors into your camera projects  | [View Product](mipiadapter/README.md)<br>|
+| <img src="https://github.com/96boards/website/blob/master/_product/mezzanine/ethernetcard/images/Ethernet_Front.jpg?raw=true" data-canonical-src="https://github.com/96boards/website/blob/master/_product/mezzanine/ethernetcard/images/Ethernet_Front.jpg?raw=true" width="200" height="95" /><br> **Ethernet**             | The PoE + Mezzanine Board is a solution that enables 96Boards to be powered over Ethernet  | [View Product](ethernetcard/README.md)<br>|
+| <img src="https://github.com/96boards/website/blob/master/_product/mezzanine/d3camera/images/Camera%20Mezzanine%20Board%20OV5640_front.jpg?raw=true" data-canonical-src="https://github.com/96boards/website/blob/master/_product/mezzanine/d3camera/images/Camera%20Mezzanine%20Board%20OV5640_front.jpg?raw=true" width="200" height="95" /><br> **D3 Camera**            | This Camera Mezzanine Board OV5640 enables direct connection of up to two MIPI CSI-2 cameras to the DragonBoard™ 410c  | [View Product](d3camera/README.md)<br>|
+| <img src="https://github.com/96boards/website/blob/master/_product/mezzanine/neonkey/images/crop-sd/neonkey-front-crop-sd.JPG?raw=true" data-canonical-src="https://github.com/96boards/website/blob/master/_product/mezzanine/neonkey/images/crop-sd/neonkey-front-crop-sd.JPG?raw=true" width="200" height="95" /><br> **NeonKey**            | NeonKey is a mezzanine board by Tocoding  | [View Product](neonkey/README.md)<br>|
+========================================
+---
+description: "Customize the AreoCore 2 for 96Boards to your project\u2019s specific
+  needs in Geppetto D2O.\nAdd functionality or remove unused components with the ease
+  of a drag-and-drop interface."
+layout: product-display-page
+permalink: /product/aerocore2/
+redirect_from:
+- /product/aerocore/
+title: AeroCore 2 for 96Boards
+---
+
+# AeroCore2
+
+Customize the AreoCore 2 for 96Boards to your project’s specific needs in [Geppetto D2O](https://www.gumstix.com/geppetto). Add functionality or remove unused components with the ease of a drag-and-drop interface.
+
+- [Clone and kickstart your customized AreoCore 2 expansion board design for 96Boards](https://geppetto.gumstix.com/#!/design/1130/)
+- [Explore and create a customized expansion board from scratch](https://geppetto.gumstix.com/)
+- [Learn more about Geppetto](https://www.gumstix.com/geppetto)
+
+** Software support for the AeroCore 2 for 96Boards limited to Yocto Linux **
+
+- [Customize in Geppetto](https://geppetto.gumstix.com/#!/design/1130/)
+- [Technical Specification](https://d3iwea566ns1n1.cloudfront.net/us-west-2/datasheets/geppetto/855bc28811a023824742294171238a8175770196.pdf)
+- [Disk Image](https://gumstix-misc.s3.amazonaws.com/uploads/db410c.img.xz)
+- [Video](https://youtu.be/LIH0tpi9KwE)
+- [Datasheet](https://s3-us-west-2.amazonaws.com/media.gumstix.com/datasheets/PKG900000000351.pdf)
+
+
+## Buy Now
+
+- [Arrow](http://link.linaro.org/aerocore2-buy-arrow)
+- [Gumstix](http://link.linaro.org/aerocore2-buy)
+
+***
+
+## Additional Information
+<div style="overflow-x:scroll;" markdown="1">
+
+
+|   Component                                       |   Description                                                                                    |
+|:--------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+|  BAROMETER                                        | Included                                                                                         |
+|  CONTROLLER AREA NETWORK (CAN)                    | For use in applications employing the CAN serial communication physical layer
+in accordance with the ISO 11898 standard.  |
+|  PROCESSOR                                        | ARM Cortex-M4 Microcontroller                                                                    |
+|  USB DEVICE                                       | Micro B USB Plug                                                                                 |
+|  5-PIN GPS CONNECTOR                              |                                                                                                  |
+|  FCI 15 PIN FPC CONNECTOR                         | Raspberry pi CSI2 and DSI connector                                                              |
+|  MAGNETIC BUZZER SMT (5V 30MA 92DBA)              | BUZZER MAGNETIC 5V 12.8MM SMD ([SPEC](http://www.cui.com/product/resource/ct-1205cl-smt.pdf))    |        
+|  TEXAS INSTRUMENTS SN65HVD232 CAN TRANSCEIVER     | Designed for use with Texas Instruments DSPs with CAN controllers and equivalent devices. Provides differential transmit and receive capability at speeds up to 1 Mbps. ([SPEC](http://www.ti.com/product/sn65hvd232))                                |
+|  FTDI FT232RQ USB UART INTERFACE                  | Connect to an RS232 serial terminal over USB with the FTDI FT232RQ interface ([SPEC](http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf))                                                                                  |
+|  MEMORY (SPI FRAM 1MB 1.8V)                       | Memory (SPI FRAM 1MB 1.8V) ([SPEC](http://media.digikey.com/pdf/Data%20Sheets/Fujitsu%20Microelectronics%20America/MB85RS1MT.pdf))                                                                                               |
+|  MS5611 BAROMETRIC SENSOR                         | A high resolution altitude and digital atmospheric pressure sensor accurate to within 10 cm.     |
+|  Mating Connectors                                |                                                                                                  |
+{:.hidden_rows}
+
+</div>
+
+***
+========================================
+---
+description: The 96Boards Sensors starter kit contains everything you need to wire
+  up sensors and devices to a 96Boards single board computer. It contains the 96Boards
+  Sensors mezzanine board with a selection of Grove modules that you can use to start
+  experimenting and prototyping with the 96Boards platform.
+layout: product-display-page
+permalink: /product/audio-mezzanine/
+redirect_from:
+- /product/audiomezz/
+title: Audio Mezz
+---
+
+# Arrow Audio Mezzanine
+
+This Audio Mezzanine Board is a Grove interfaced expansion board intended for 96boards.
+You can connect 96Boards to various modules easily with this expansion board. There are six
+grove ports which can be used to connect rich Grove functional modules, which will make your
+application more complicated and attracting. In addition, this expansion board gets one 3.5 mm
+audio port and two independent MICs which can be applied into multimedia processing. Since
+96Boards I/O voltage is set at 1.8 V, so it cannot be connected directly to embedded world. This
+expansion board has used voltage converting circuit so that you can choose 3.3V/5V as the
+output voltage. Other features are also embedded on this expansion board such as USB to
+Serial circuit and reset button, and so on, all those make 96Boards more conveniently to build
+applications.
+
+## Buy Now
+
+- [Arrow Electronics](https://www.arrow.com/en/products/audiomezz/seeed-technology-limited)
+
+***
+
+## Specification
+
+- Input Voltage: 6.5~18V(DC Input)
+- Operating Voltage: 1.8/3.3/5V
+- No-load Current: 30mA
+- Dimension: 85x54mm
+- Weight: 28g
+- Location hole diameter: 2.5mm
+
+## Features
+
+- 6 x On-board Grove connector
+   - 2x I2C
+   - 1x UART
+   - 3x GPIO
+- USB to UART conversion for access to the 410c system console.
+- Access to the Analog Audio on the 410c board
+   - 3.5mm headset jack
+   - Analog Mic
+   - Digital Mic
+   - Speaker connection
+- Access to the low-speed expansion connector
+   - Level shifted to 3.3V or 5V levels (selection switch)
+   - Access to level shifted signals on 2.54mm (0.1”) 40-pin connector for ease of connectivity
+   - Switch to disable level shifters for pass-through applications
+   - Signals available at 1.8V levels on 2mm connector
+- Power and Reset/Volume down buttons
+- Pass through stacking connectors so that other Mezzanine cards may be stacked on top of the AMB
+
+***
+========================================
+---
+description: "D3 Engineering DesignCore\u2122 Camera Mezzanine Board OV5640 enables
+  direct connection of up to two MIPI CSI-2 cameras to the DragonBoard\u2122 410c.
+  \ Direct MIPI CSI-2 access to camera data allows more realistic evaluation of embedded
+  vision designs. Eliminating the need to decode USB or Ethernet protocols results
+  in lower power and higher performance."
+layout: product-display-page
+permalink: /product/d3camera/
+redirect_from:
+- /product/d3-designcore-camera-mezzanine/
+title: D3Camera
+---
+
+# D3 Camera Mezzanine
+
+D3 Engineering DesignCore™ Camera Mezzanine Board OV5640 enables direct connection of up to two MIPI CSI-2 cameras to the DragonBoard™ 410c.  Direct MIPI CSI-2 access to camera data allows more realistic evaluation of embedded vision designs. Eliminating the need to decode USB or Ethernet protocols results in lower power and higher performance.
+
+## Buy Now
+
+- [Arrow Electronics](https://www.arrow.com/en/products/d3cameramezzov5640/d3-engineering)
+
+***
+
+## Additional Information
+
+- Camera Interfaces: Two MIPI CSI-2 (2-lane)
+- Expansion Interfaces: Two UART, two SPI, one I2C, one PCM, GPIO.
+- [Designcore Camera Mezzanine WIKI](https://github.com/D3Engineering/410c_camera_support/wiki)
+- Datasheet and Schematics ([View](https://github.com/96boards/website/blob/master/_product/mezzanine/d3camera/files/D3Eng_DesignCore_CamMezzBoard_DataSheet.pdf) / [Download](https://github.com/96boards/website/raw/master/_product/mezzanine/d3camera/files/D3Eng_DesignCore_CamMezzBoard_DataSheet.pdf))
+- OV5640 Quickstart Guide ([View](https://github.com/96boards/website/blob/master/_product/mezzanine/d3camera/files/D3Eng_DesignCore_CamMezzBoard_OV5640_QuickStart_Guide_v1.pdf) / [Download](https://github.com/96boards/website/raw/master/_product/mezzanine/d3camera/files/D3Eng_DesignCore_CamMezzBoard_OV5640_QuickStart_Guide_v1.pdf))
+
+***
+========================================
+---
+{}
+---
+========================================
+---
+description: The PoE + Mezzanine Board is a solution that enables the 96Boards to
+  be powered over Ethernet. The Board consists of three key components. The LAN7850
+  from Microchip provides Gigabit Ethernet through high speed USB 2.0, which is connected
+  to the 96Boards standard HS expansion connector.
+layout: product-display-page
+permalink: /product/ethernetcard/
+redirect_from:
+- /product/poe-ethernet-mezzanine/
+- /products/poe-ethernet-mezzanine/
+- /products/ethernetcard/
+title: Ethernet Card
+---
+
+# PoE + Ethernet Mezzanine
+
+The PoE + Mezzanine Board is a solution that enables the 96Boards to be powered over Ethernet. The Board consists of three key components. The LAN7850 from Microchip provides Gigabit Ethernet through high speed USB 2.0, which is connected to the 96Boards standard HS expansion connector. For a secure transmission of data the Mezzanine Board is equipped with Atmel’s Hardware Asymmetric Crypto Engine TPM AT97SC3205T. Furthermore, it allows the 96Boards to be powered over the external Ethernet POE+ line by Linear Technology’s LT4276. The 2 poles connector on the shield can be used to power an external device using the 12V generated by the POE+ circuitry. The Mezzanine Board can be plugged directly on top of 96Boards consumer edition (CE) products and on top of it you have the possibility to plug other extension shields
+
+## Buy Now
+
+- [Coming soon...]()
+
+***
+========================================
+---
+{}
+---
+========================================
+---
+{}
+---
+
+I
+========================================
+---
+description: '96Boards starter kit with Linker mezzanine card and loft modules. All
+  the Linker kit modules can be plugged onto 96Boards through this card. This starter
+  kit is a great way to get started with 96Boards.
+
+  96Boards.'
+layout: product-display-page
+permalink: /product/linkspritesensorkit/
+redirect_from:
+- /product/linksprite/
+- /product/linker-mezzanine-starter-kit/
+- /products/mezzanine/linker-mezzanine-starter-kit/
+title: Link Sprite
+---
+
+# Arrow LinkSprite Mezzanine Kit
+
+96Boards starter kit with Linker mezzanine card and loft modules. All the Linker kit modules can be plugged onto 96Boards through this card. This starter kit is a great way to get started with 96Boards, and it contains the components you need to make
+eight fun projects following step-by-step tutorials. Starting from the basics of electronics modules, to more complex projects, the kit will help you control the physical world with sensor and actuators and help you ramp up your progamming using
+96Boards.
+
+The Linker mezzanine card has eight connectors supporting Analog, UART, I2C and GPIO, and two channels of analog input using the MCP3004 ADC chip. There are bidirectional voltage-level translators which allows for low-voltage bidirectional translation
+between any of the 1.2-V,1.5-V, 1.8-V, 2.5-V, 3.3-V, and 5-V voltage nodes. So it is compatible with 3.3V or 5V modules and makes connecting peripherals easy. You just plug a jumper onto JP9 to select which input voltage you need.
+
+## Buy Now
+
+- [Arrow Electronics](https://www.arrow.com/en/products/96boards-starter-kit/linksprite-technologies-inc)
+
+***
+
+## Kit Includes
+
+- [1 × Linker Mezzanine card for 96board [105101022]](http://linksprite.com/wiki/index.php5?title=Linker_Mezzanine_card_for_96board)
+- [1 × Button Module [118101002]](http://linksprite.com/wiki/index.php5?title=Button_Module)
+- [1 × 5mm Red LED Module [118101001-5]](http://linksprite.com/wiki/index.php5?title=5mm_Red_LED_Module)
+- [1 × LDR Module [118101003]](http://linksprite.com/wiki/index.php5?title=LDR_Module)
+- [1 × Thermal Module [118101005]](http://linksprite.com/wiki/index.php5?title=Thermal_Module)
+- [1 × Linear/Slide Potentiometer Module [118101006]](http://linksprite.com/wiki/index.php5?title=Linear/Slide_Potentiometer_Module)
+- [1 × Tilt Module [118101004]](http://linksprite.com/wiki/index.php5?title=Tilt_Module)
+- [1 × Touch Sensor Module [118101007]](http://linksprite.com/wiki/index.php5?title=Touch_Sensor_Module)
+- [1 × Relay Module [118101008]](http://linksprite.com/wiki/index.php5?title=Relay_Module)
+- [8 × 20cm Cables [118201001]](http://linksprite.com/wiki/index.php5?title=20cm_Cables)
+- 1 × Plastic case
+
+***
+========================================
+---
+description: This MIPI adapter board is primarily designed for Dragonboard 410c, though
+  it is hardware compatible with other Consumer Edition 96Boards. With this adapter,
+  you can easily integrate image sensors into your camera projects. This mezzanine
+  is ideal for surveillance, video conference and even robots projects. It provides
+  multiple interfaces, and gives you a wide range of choices for selecting different
+  camera boards/modules.
+layout: product-display-page
+permalink: /product/mipiadapter/
+redirect_from:
+- /product/mipi-adapter-mezzanine/
+title: MIPI Adapter Mezzanine
+---
+
+# MIPI Adapter Mezzanine - AiStarVision
+
+This MIPI adapter board is primarily designed for Dragonboard 410c, though it is hardware compatible with other Consumer Edition 96Boards. With this adapter, you can easily  integrate image sensors into your camera projects. This mezzanine is ideal for
+surveillance, video conference and even robots projects. It provides multiple interfaces, and gives you a wide range of choices for selecting different camera boards/modules.
+
+## Buy Now
+
+- [eBay - 96Boards MIPI Adapter (Board only)](http://www.ebay.com/itm/96Boards-MIPI-Adapter-/252900099832?hash=item3ae20546f8:g:w1MAAOSw03lY5Aaf)
+- [eBay - 96Boards MIPI Adapter with OV5645](http://www.ebay.com/itm/96Boards-MIPI-Adapter-with-OV5645-auto-focus-module-/252956476095?hash=item3ae56182bf:g:8z4AAOSwA29Y30WD)
+- [eBay - 96Boards MIPI Adapter with Dual OV5640](http://www.ebay.com/itm/96Boards-MIPI-Adapter-with-Dual-OV5640-/252928072406?hash=item3ae3b01ad6:g:O7kAAOSwTM5Y4frc)
+- [eBay - OV5640 Camera Module only](http://www.ebay.com/itm/OV5645-auto-focus-module/252956491650)
+
+***
+
+## Additional Information
+
+- Full 4 lane support for CSI0
+- Camera interface for OV5645/OV5640 auto focus module and OV7251 module
+- Camera interface for Raspberry PI cameras
+- Camera interface for IPEX connector based cameras
+- UART0/UART1/SPI0/I2C0/I2C1/I2C2 and GPIOs
+
+***
+========================================
+---
+description: "96Boards Neonkey is the sensor hub platform for all 96Boards compliant
+  family products.\n\u200BThe Neonkey packs a Cortex-M4 chip, 512 Kbytes flash, 128
+  Kbytes SRAM, and more details of SPEC as below."
+layout: product-display-page
+permalink: /product/neonkey/
+redirect_from:
+- /product/neonkey-mezzanine/
+title: NeonKey
+---
+
+# NeonKey Mezzanine
+
+96Boards Neonkey is the sensor hub platform for all 96Boards compliant family products.
+​The Neonkey packs a Cortex-M4 chip, 512 Kbytes flash, 128 Kbytes SRAM, and more details of SPEC as below.
+
+## Buy Now
+
+- [AliExpress](https://linaro.co/neonkey-buy)
+
+***
+
+## Features
+
+| Component            | Description                                                                                               |
+|:---------------------|:---------------------------------------------------------------------------------------------------------:|
+| SoC                  | STMicroelectronics STM32F411CE                                                                            |
+| CPU                  | ARM Cortex-M4                                                                                             |
+| Clock Speed          | 100 MHz Maximum                                                                                           |
+| SRAM                 | 128 Kbytes                                                                                                |
+| Storage              | 512 Kbytes flash                                                                                          |
+| Sensors              | Temp/Humidity, Preasure, ALS/Proximity, Geomagnetic, Accel/Gyro                                           |
+| Expansion Interface  | 40 pin low-speed expansion connector, +1.8V, +5V, GND, SWDIO, SWCLK, UART, I2C, SPI, I2S, JTAG, MCU, GPIO |
+| Digital Out Voltage  | 1.8V                                                                                                      |
+| Analog In Voltage    | 3.3V                                                                                                      |
+| LED                  | 16 x LEDs                                                                                                 |
+| Button               | RST (Reset the STM32), USR (boot into bootloader for flashing)                                            |
+| Size                 | 60x30mm                                                                                                   |
+{:.hidden_rows}
+
+## Documents
+
+- [AOSP Sensors Documentation](https://source.android.com/devices/sensors/)
+- [AOSP NeonKey Documentation](https://source.android.com/source/devices#neonkey)
+- Schematics ([View](https://github.com/96boards/website/blob/master/_product/mezzanine/neonkey/files/neonkey-schematics.pdf) / [Download](https://github.com/96boards/website/raw/master/_product/mezzanine/neonkey/files/neonkey-schematics.pdf))
+- [NeonKey on Tocoding](http://en.tocoding.com/index.php/96boards-neonkey/)
+========================================
+---
+description: The 96Boards Sensors Mezzanine adapter makes it simple and easy to connect
+  sensors and devices to any 96Boards-compatible base board. With it you can connect
+  your favourite Grove modules and Arduino compatible shields and interface to software
+  running on the 96Boards baseboard. It provides everything you need to start experimenting
+  and prototyping on the 96Boards platform.
+layout: product-display-page
+permalink: /product/sensors-mezzanine/
+redirect_from:
+- /product/grove-starter-kit/
+- /product/sensorsmezz/
+- /product/sensors/
+- /products/mezzanine/sensors-mezzanine/
+- /products/mezzanine/grove-starter-kit/
+- /products/mezzanine/sensors/
+title: Sensors
+---
+
+# Grove Seeed Sensor Mezzanine
+
+The 96Boards Sensors Mezzanine adapter makes it simple and easy to connect sensors and devices to any 96Boards-compatible base board. With it you can connect your favourite Grove modules and Arduino compatible shields and interface to software running
+on the 96Boards baseboard. It provides everything you need to start experimenting and prototyping on the 96Boards platform.
+
+On the board you will find sockets for 18 Grove modules, an Arduino-compatible shield socket, and two SPI headers. It also includes an ATMega328 microcontroller which can be programmed from the Arduino IDE and will run most Arduino UNO sketches
+unchanged. The shield connector and half of the Grove sockets are controlled by the microcontroller, while the remaining Grove sockets are controlled directly by the baseboard. This makes it a flexible prototyping platform which supports both direct
+control of devices from application software, and offload to a microcontroller. It also provides a USB-UART interface to access the base board’s serial console.
+
+## Buy Now
+
+- [SeeedStudio - Mezzanine Only](http://linaro.co/20n34bc)
+- [SeeedStudio - Grove Starter Kit](http://linaro.co/1KnV9TA)
+
+***
+
+## Features (Mezzanine Board)
+
+- Compatible with 96Boards CE and EE baseboards
+- Integrated Arduino-compatible ATMEGA328 microcontroller
+- Arduino UNO compatible expansion headers
+- 9 Grove connectors for 96Boards IO (mixed 3.3V and 5V; all 5V tolerant): 5x GPIO, and 4x I2C
+- 9 Grove connectors for ATMEGA328 IO (all 5V): 5x GPIO, 3x ADC, and 1x I2C
+- 2 6-pin SPI headers
+- MicroUSB interface to 96Boards console serial port
+- 1 Power LED
+- 3 user LEDs
+- Reset button
+- Power button
+
+## Grove Starter Kit (Includes Mezzanine Board)
+
+- 1 x 96Boards Sensors Board (part # 96B-05GROVE-C)
+- 1 x [Grove – LCD RGB Backlight](http://www.seeedstudio.com/depot/Grove-LCD-RGB-Backlight-p-1643.html?cPath=34_36)
+- 1 x [Grove – Smart Relay](http://www.seeedstudio.com/depot/grove-relay-p-769.html?cPath=156_160)
+- 1 x [Grove – Buzzer](http://www.seeedstudio.com/depot/grove-buzzer-p-768.html?cPath=156_159)
+- 1 x [Grove – Sound Sensor](http://www.seeedstudio.com/depot/grove-sound-sensor-p-752.html?cPath=144_148)
+- 1 x [Grove – Touch Sensor](http://www.seeedstudio.com/depot/grove-touch-sensor-p-747.html?cPath=156_160)
+- 1 x [Grove – Rotary Angle Sensor](http://www.seeedstudio.com/depot/grove-rotary-angle-sensor-p-p-1242.html?cPath=156_160)
+- 1 x [Grove – Temperature Sensor](http://www.seeedstudio.com/depot/grove-temperature-sensor-p-774.html?cPath=144_147)
+- 1 x [Grove – LED](http://www.seeedstudio.com/depot/Grove-LED-p-767.html?cPath=81_35)
+- 1 x [Grove – Light Sensor](http://www.seeedstudio.com/depot/Grove-Light-Sensor-p-746.html?cPath=25_27)
+- 1 x [Grove – Button](http://www.seeedstudio.com/depot/grove-button-p-766.html?cPath=156_160)
+- 1 x DIP LED Blue-Blue
+- 1 x DIP LED Green-Green
+- 1 x DIP LED Red-Red
+- 1 x Mini Servo
+- 10 x Grove Cables
+- 4 x M2.5 8mm nylon spacer
+- 4 x M2.5 nylon screw
+- 1 x Green Plastic Box
+
+## Documents
+
+- [Getting Started with Sensor Kit](http://linaro.co/sensorkitpdf)
+- [Schematics](https://github.com/96boards/96boards-sensors/raw/master/Sensors.pdf)
+- [Design Files on GitHub](https://github.com/96boards/96boards-sensors)
+========================================
+---
+description: The STM32 Sensor board is a 96Boards mezzanine board based around the
+  STM32F446 MCU (named B-F446E-96B01A)
+layout: product-display-page
+permalink: /product/stm32/
+redirect_from:
+- /product/stm32sensor/
+- /products/mezzanine/stm32sensor/
+title: STM32 Sensor Mezzanine Board
+---
+
+# STM32 Sensor mezzanine board, mbed™-enabled
+
+The STM32 Sensor board is a 96Boards mezzanine board based around the STM32F446 MCU (named B-F446E-96B01A). This board enables users to prototype systems that are aware of their environment, thanks to the embedded sensors for movement, pressure and
+sound. It can be plugged directly on top of 96Boards consumer edition (CE) products and supports multiple expansion possibilities through the Arduino™ Uno Revision 3 and Grove™connectivity. The integrated ST-Link debugger facilitates software
+development, drag-and-drop programming and provides direct access to the ARM® mbed™on-line resources.
+
+The 96Boards Mezzanine board with the STM32F446 MCU (B-F446E-96B01A) enables users to prototype systems that are aware of their environment, thanks to the embedded sensors for movement, pressure and sound. It can directly be plugged on top of the
+96Boards CE cards and supports multiple expansion possibilities through the ArduinoTM Uno Revision 3 or the GroveTM connectivity. The integrated ST-LINK/V2-1 debugger facilitates software development, drag- and-drop programming and provides a direct
+access to the ARM® mbedTM on-line resources.
+
+## Buy Now
+
+- [Arrow Electronics](http://linaro.co/stm32arrow)
+- [Mouser Electronics](http://linaro.co/stm32mouser)
+- [Future Electronics](http://linaro.co/stm32futureelectronics)
+
+## Features
+
+- Based on STM32F446 MCU ARM® Cortex® -M4 180MHz in LQFP100 package
+- Compliant with the 96Boards CE standard
+- Two types of extension resources:
+   – 96Boards high/low-speed connectivity
+   – ArduinoTM Uno Revision 3 and GroveTM connectivity
+- ARM® mbedTM -enabled (see http://mbed.org) planned for the first quarter of 2016
+- Integrated MEMS sensors:
+   – 9-axis accelerometer/gyroscope/magnetometer
+   – Pressure, microphone
+- On-board ST-LINK/V2-1 debugger/programmer
+- USB re-enumeration capability:
+   – Virtual Com port
+   – Mass storage
+   – Debug port
+- Supported by wide choice of Integrated Development Environments (IDEs) including IARTM, Keil®, GCC-based IDEs, ARM® mbedTM online
+
+***
+========================================
+---
+description: This adapter is a USB to UART interface to be used with any base board
+  compatible with the 96Boards Consumer Edition or Enterprise Edition specifications.
+layout: product-display-page
+permalink: /product/uartserial/
+redirect_from:
+- /product/uarts/
+- /products/mezzanine/uarts/
+title: UART Serial
+---
+
+# UART Serial Mezzanine
+
+Available now from Seeed: This adapter is a USB to UART interface to be used with any base board compatible with the 96Boards Consumer Edition or Enterprise Edition specifications.
+
+It makes it easy to connect your PC to the serial console on the 96Boards low-speed expansion connector, without worrying about pinout or level shifting for 1.8V IO. It also provides remote control of the power button and reset signals so that the base board can be completely controlled over a single USB cable.
+
+Since it uses the FT230X chip from FTDI, when it is connected to your PC over USB, it appears as a normal UART interface on a PC, Macintosh or Linux computer with an FTDI UART driver installed.
+
+## Buy Now
+
+- [SeeedStudio](http://linaro.co/uart-seeed)
+
+***
+
+## Additional Resources
+
+- [User Guide](https://github.com/96boards/96boards-uart/raw/master/96boards-uart-userguide.pdf)
+- [Schematics](https://github.com/96boards/96boards-uart/raw/master/96boards-uart.pdf)
+
+***
+
+## Additional Information
+
+|   Component                                                            |   Description                                                                                    |
+|:-----------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+|  2 x 20 2.0mm pitch male header                                        |   Attaches to 96Boards low-speed (LS) expansion connector                                        |
+|  FT230X USB to UART adapter chip                                       |                                                                                                  |
+|  USB bus powered. Doesn’t disconnect when base board power is cycled   |                                                                                                  |
+|  Switchable between LS UART0 and UART1. (UART1 is the default console) |                                                                                                  |
+|  CTS/RTS with using UART0                                              |                                                                                                  |
+|  TX and RX LEDs                                                        |                                                                                                  |
+|  Remote control of baseboard reset and power signals                   |                                                                                                  |        
+|  Base board reset button                                               |                                                                                                  |        
+|  TX and RX LEDs                                                        |                                                                                                  |        
+|  User LED connected to GPIOB (GPIOA on v1.0 of the adapter)            |                                                                                                  |        
+{:.hidden_rows}
+
+## Parts list
+
+- 96Boards UART (part # 96B-05UART-V1.1)
+- 2 x 2.0mm shunts
+
+***
